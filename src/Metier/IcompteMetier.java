@@ -14,10 +14,3 @@ public interface IcompteMetier extends Remote{
 	public void ModifierSoldeCompte(int solde,int Compte);
 	public void ModifierCompte(Compte C);
 	}
-	
-
-
-	
-	
-
-
