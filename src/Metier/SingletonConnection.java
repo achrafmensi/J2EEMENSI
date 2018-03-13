@@ -9,8 +9,8 @@ private static Connection connection;
 static {
 	try {
 		
-	Class.forName("com.mysql.jdbc.driver");
-	connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/banque","root","");
+	Class.forName("com.mysql.jdbc.Driver");
+	connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/Banque","root","");
 	}
 	catch (ClassNotFoundException ex) {
 		System.out.println("probleme bd");
@@ -18,7 +18,7 @@ static {
 		
 	}
 	catch (SQLException ex) {
-		System.out.println("probleme bd");
+		System.out.println("probleme bd2");
 		System.out.println(ex.getMessage());
 		}
 	}

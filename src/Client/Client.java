@@ -10,7 +10,7 @@ public class Client {
 		String message;
 		try{
 			// obj de type hello
-			obj=(icompte)Naming.lookup("rmi://localhost:1098/HelloServer");
+			obj=(icompte)Naming.lookup("rmi://localhost:1099/Banque");
 			// msg de type string
 	      
 	      System.out.println(obj.lire());
