@@ -1,5 +1,5 @@
 package Metier;
-
+import java.sql.*;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
@@ -29,8 +29,16 @@ public ArrayList<Compte> AfficherListe() {
 
 @Override
 public void ajouterCompte(Compte C) {
-	// TODO Auto-generated method stub
-	
+try {
+st=(PreparedStatement) con.prepareStatement("insert into compte (numcp,typecp,soldecp) values(?,?,?)");	
+st.setInt(1,C.getNumCp());
+st.setString(2,C.getTypecp());
+st.setInt(3,C.getSolde());
+st.executeUpdate();
+} catch (SQLException ex) {
+	System.out.println(ex.getMessage());
+} 
+
 }
 
 @Override
